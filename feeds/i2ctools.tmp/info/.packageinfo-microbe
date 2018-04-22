@@ -1,0 +1,21 @@
+Source-Makefile: feeds/i2ctools/microbe/Makefile
+Package: microbe
+Version: 2017-11-30-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +busybox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Microbe - a selection of scripts for routers with a small amount of flash memory
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Microbe - a selection of scripts for routers with a small amount of flash memory
+https://github.com/ZigFisher/Glutinium/tree/master/microbe
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+

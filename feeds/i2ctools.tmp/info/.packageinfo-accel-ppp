@@ -1,0 +1,22 @@
+Source-Makefile: feeds/i2ctools/accel-ppp/Makefile
+Package: accel-ppp
+Submenu: VPN
+Version: 1.8.0-beta-20131107-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +libpcre +libpthread +librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: accel-ppp VPN server
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Source: accel-ppp-1.8.0-beta-20131107.tar.bz2
+Type: ipkg
+Description:  The ACCEL-PPP is high performance PPTP/L2TP/PPPoE server for Linux. Userspace
+ daemon has its own PPP implementation, so it does not uses pppd and one process
+ (multi-threaded) manages all connections.
+http://sourceforge.net/apps/trac/accel-ppp/wiki
+Entware team, wl500g-repo.googlecode.com
+@@
+
+

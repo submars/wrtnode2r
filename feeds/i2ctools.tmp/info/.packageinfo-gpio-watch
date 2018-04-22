@@ -1,0 +1,19 @@
+Source-Makefile: feeds/i2ctools/gpio-watch/Makefile
+Package: gpio-watch
+Version: 2017-06-08-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @GPIO_SUPPORT +librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: GPIO monitoring tool
+Maintainer: https://github.com/larsks/gpio-watch
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: 	GPIO monitoring tool
+https://github.com/larsks/gpio-watch
+@@
+
+

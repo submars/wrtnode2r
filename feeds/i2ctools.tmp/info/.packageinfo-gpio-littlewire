@@ -1,0 +1,21 @@
+Source-Makefile: feeds/i2ctools/gpio-littlewire/Makefile
+Package: kmod-gpio-littlewire
+Submenu: Other modules
+Version: <LINUX_VERSION>+0.1-1
+Depends: @GPIO_SUPPORT +kmod-usb-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Little Wire USB device GPIO driver
+Maintainer: https://www.mail-archive.com/linux-gpio@vger.kernel.org/msg01353.html
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Little Wire USB device GPIO driver
+https://www.mail-archive.com/linux-gpio@vger.kernel.org/msg01353.html
+@@
+
+

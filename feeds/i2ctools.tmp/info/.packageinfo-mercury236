@@ -1,0 +1,20 @@
+Source-Makefile: feeds/i2ctools/mercury236/Makefile
+Package: mercury236
+Version: 2017-08-10-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Mercury 236 power meter RS485 communication utility
+Maintainer: https://github.com/Shden/mercury236
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Mercury 236 power meter RS485 communication utility
+https://github.com/Shden/mercury236
+@@
+
+

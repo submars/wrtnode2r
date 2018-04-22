@@ -1,0 +1,1 @@
+Makefile:$(eval $(call BuildPackage,shellinabox))

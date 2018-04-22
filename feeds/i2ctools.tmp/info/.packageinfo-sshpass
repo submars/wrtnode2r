@@ -1,0 +1,19 @@
+Source-Makefile: feeds/i2ctools/sshpass/Makefile
+Package: sshpass
+Version: 1.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: sshpass
+Maintainer: 
+Source: sshpass-1.5.tar.gz
+Type: ipkg
+Description:        Sshpass is a tool for non-interactivly performing password authentication with SSH's
+Non-interactive SSH authenticator
+
+@@
+
+

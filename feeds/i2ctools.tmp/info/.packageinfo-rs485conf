@@ -1,0 +1,20 @@
+Source-Makefile: feeds/i2ctools/rs485conf/Makefile
+Package: rs485conf
+Version: 2016-07-04-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Util for get/set RS485 configuration of TTY
+Maintainer: https://github.com/mniestroj/rs485conf
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Util for get/set RS485 configuration of TTY
+https://github.com/mniestroj/rs485conf
+@@
+
+

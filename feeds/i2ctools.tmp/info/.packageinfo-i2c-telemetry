@@ -1,0 +1,18 @@
+Source-Makefile: feeds/i2ctools/i2c-telemetry/Makefile
+Package: i2c-telemetry
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread kmod-i2c-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Simple I2C telemetry system
+Maintainer: http://flymon.net
+Source: 
+Type: ipkg
+Description:   Simple I2C telemetry system.
+http://flymon.net
+@@
+
+

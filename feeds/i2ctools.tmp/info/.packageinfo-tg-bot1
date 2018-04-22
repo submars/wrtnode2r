@@ -1,0 +1,20 @@
+Source-Makefile: feeds/i2ctools/tg-bot1/Makefile
+Package: tg-bot1
+Version: 2017-11-26-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +curl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: TG-Bot1 - simple Telegram bot for OpenWrt based devices
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: 	TG-Bot1 - simple Telegram bot for OpenWrt based devices
+https://github.com/ZigFisher/Glutinium/tree/master/tg-bot1
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+

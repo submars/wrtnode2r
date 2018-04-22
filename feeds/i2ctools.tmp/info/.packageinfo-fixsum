@@ -1,0 +1,20 @@
+Source-Makefile: feeds/i2ctools/fixsum/Makefile
+Package: fixsum
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: admin
+Category: Administration
+Title: Fix atheros ath9k chipset EEPROM checksum
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	Fix atheros ath9k chipset EEPROM checksum.
+	Binary file is wholeflash data or "EEPROM" partition.
+http://www.home-wifi.com/thread-6667-1-1.html
+
+@@
+
+
