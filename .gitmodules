@@ -1,0 +1,6 @@
+[submodule "package/network/utils/shellinabox"]
+	path = package/network/utils/shellinabox
+	url = https://github.com/submars/wrtnode2r.git
+[submodule "package/usb-modeswitch-official"]
+	path = package/usb-modeswitch-official
+	url = https://github.com/submars/wrtnode2r.git
