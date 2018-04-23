@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# Start vtun tunnel
+#(while true ; do sleep 5; /usr/sbin/vtund -n -f /etc/vtund.conf vboxXXXX vbox3.flymon.net -P 5000 >/dev/null 2>&1; done) &
+#
+# Push data to FlyPeek service (USB & IPC versions)
+#(while true ; do sleep 300; /usr/sbin/service_flypeek_usb.sh >/dev/null 2>&1; done) &
+#(while true ; do sleep 300; /usr/sbin/service_flypeek_ipc.sh >/dev/null 2>&1; done) &
+#
+# Push data to OctoniX service
+#(while true ; do sleep 300; /usr/sbin/service_octonix.sh >/dev/null 2>&1; done) &
+#
+# Push data to ThingSpeak service
+#(while true ; do sleep 300; /usr/sbin/service_thingspeak.sh >/dev/null 2>&1; done) &
+#
+# Push data to Narodmon service
+#(while true ; do sleep 300; /usr/sbin/service_narodmon.sh >/dev/null 2>&1; done) &
+#
+# Start ser2net
+#(while true ; do sleep 5; /usr/sbin/ser2net -d -c /etc/ser2net.conf >/dev/null 2>&1; done) &
+#
+# Start checker
+#(while sleep 300; do if ! ping -q -c 6 8.8.8.8; then reboot; else echo 'Link to central node - OK' | logger; fi; done) &
+#
+# Disable unused ports  (one port bricket)
+#swconfig dev switch0 port 1 set disable 1
+#swconfig dev switch0 port 2 set disable 1
+#swconfig dev switch0 port 3 set disable 1
+#swconfig dev switch0 port 4 set disable 1
+#swconfig dev switch0 port 5 set disable 1
+#swconfig dev switch0 set apply
+#swconfig dev switch0 show
+#
+# Init GPIO and start modem's correctly
+#echo "17" >/sys/class/gpio/export
+#echo "20" >/sys/class/gpio/export
+#echo "0" >/sys/class/gpio/gpio17/value
+#echo "0" >/sys/class/gpio/gpio20/value
+#echo "out" >/sys/class/gpio/gpio17/direction
+#echo "out" >/sys/class/gpio/gpio20/direction
+#sleep 3
+#echo "1" >/sys/class/gpio/gpio17/value
+#echo "1" >/sys/class/gpio/gpio20/value
+#
+# Firewall settings
+#/usr/sbin/iptables -I FORWARD -j ACCEPT -o br-lan -i br-vlan490
+#/usr/sbin/iptables -I FORWARD -j ACCEPT -i br-lan -o br-vlan490
+#/usr/sbin/iptables -A POSTROUTING -t nat -s 172.17.32.0/24 -d 172.28.0.0/16 -j MASQUERADE
+#
+#/usr/sbin/iptables -I FORWARD -j ACCEPT -o br-world -i vboxXXXX
+#/usr/sbin/iptables -I FORWARD -j ACCEPT -i br-world -o vboxXXXX
+#/usr/sbin/iptables -A POSTROUTING -t nat -s 192.168.2.0/24 -j MASQUERADE
+#
+#exit 0

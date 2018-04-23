@@ -1,0 +1,18 @@
+Source-Makefile: feeds/i2ctools/i2c-lcd/Makefile
+Package: i2c-lcd
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ramips @GPIO_SUPPORT +kmod-i2c-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: LCD monitor for HD44780 over I2C by PCF8574 bus expander
+Maintainer: http://flymon.net
+Source: 
+Type: ipkg
+Description:   LCD monitor for HD44780 over I2C by PCF8574 bus expander.
+http://flymon.net
+@@
+
+

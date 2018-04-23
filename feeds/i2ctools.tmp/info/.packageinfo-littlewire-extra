@@ -1,0 +1,20 @@
+Source-Makefile: feeds/i2ctools/littlewire-extra/Makefile
+Package: littlewire-extra
+Version: 2016-10-14-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Little Wire experimental utilites
+Maintainer: https://zftlab.org
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Little Wire experimental utilites
+https://zftlab.org
+@@
+
+

@@ -1,0 +1,206 @@
+diff -Naur a/src/dfrec/dfrec.cxx b/src/dfrec/dfrec.cxx
+--- a/src/dfrec/dfrec.cxx	2017-10-16 13:19:48.000000000 +0000
++++ b/src/dfrec/dfrec.cxx	2017-10-17 08:55:05.310237288 +0000
+@@ -31,6 +31,18 @@
+ using namespace upm;
+ using namespace std;
+ 
++#include <sstream>
++
++namespace patch
++{
++    template < typename T > std::string to_string( const T& n )
++    {
++        std::ostringstream stm ;
++        stm << n ;
++        return stm.str() ;
++    }
++}
++
+ DFREC::DFREC(unsigned int apin, unsigned int uart_ow,
+              unsigned int device_idx,
+              float a_ref) :
+@@ -54,7 +66,7 @@
+     {
+       throw std::runtime_error(string(__FUNCTION__)
+                                + ": dfrec_update() failed with UPM error "
+-                               + std::to_string(int(rv)) );
++                               + patch::to_string(int(rv)) );
+     }
+ }
+ 
+diff -Naur a/src/dfrorp/dfrorp.cxx b/src/dfrorp/dfrorp.cxx
+--- a/src/dfrorp/dfrorp.cxx	2017-10-16 13:19:48.000000000 +0000
++++ b/src/dfrorp/dfrorp.cxx	2017-10-17 08:55:04.398240262 +0000
+@@ -24,12 +24,28 @@
+ 
+ #include <iostream>
+ #include <stdexcept>
++#include <string>
++#include <sstream>
+ 
+ #include "dfrorp.hpp"
+ 
+ using namespace upm;
+ using namespace std;
+ 
++#include <string>
++#include <sstream>
++
++namespace patch
++{
++    template < typename T > std::string to_string( const T& n )
++    {
++        std::ostringstream stm ;
++        stm << n ;
++        return stm.str() ;
++    }
++}
++
++
+ DFRORP::DFRORP(int apin, float a_ref) :
+   m_dfrorp(dfrorp_init(apin, a_ref))
+ {
+@@ -51,7 +67,7 @@
+     {
+       throw std::runtime_error(string(__FUNCTION__)
+                                + ": dfrorp_update() failed with UPM error "
+-                               + to_string(int(rv)) );
++                               + patch::to_string(int(rv)) );
+     }
+ }
+ 
+diff -Naur a/src/l3gd20/l3gd20.cxx b/src/l3gd20/l3gd20.cxx
+--- a/src/l3gd20/l3gd20.cxx	2017-10-16 13:19:48.000000000 +0000
++++ b/src/l3gd20/l3gd20.cxx	2017-10-17 08:55:05.466236780 +0000
+@@ -41,6 +41,18 @@
+ using namespace upm;
+ using namespace std;
+ 
++#include <sstream>
++
++namespace patch
++{
++    template < typename T > std::string to_string( const T& n )
++    {
++        std::ostringstream stm ;
++        stm << n ;
++        return stm.str() ;
++    }
++}
++
+ static float c2f(float c)
+ {
+   return (c * (9.0 / 5.0) + 32.0);
+@@ -138,11 +150,11 @@
+     {
+       throw std::runtime_error(std::string(__FUNCTION__) +
+                                ": Invalid Chip ID: expected "
+-                               + to_string(L3GD20_DEFAULT_CHIP_ID)
++                               + patch::to_string(L3GD20_DEFAULT_CHIP_ID)
+                                + " or "
+-                               + to_string(L3GD20H_DEFAULT_CHIP_ID)
++                               + patch::to_string(L3GD20H_DEFAULT_CHIP_ID)
+                                + ", got "
+-                               + to_string(int(cid)));
++                               + patch::to_string(int(cid)));
+       return;
+     }
+ 
+@@ -282,7 +294,7 @@
+     {
+       throw std::runtime_error(std::string(__FUNCTION__)
+                                + ": readRegs() failed to read "
+-                               + to_string(bufLen)
++                               + patch::to_string(bufLen)
+                                + " bytes");
+     }
+ 
+diff -Naur a/src/max30100/max30100.cxx b/src/max30100/max30100.cxx
+--- a/src/max30100/max30100.cxx	2017-10-16 13:19:48.000000000 +0000
++++ b/src/max30100/max30100.cxx	2017-10-17 08:55:05.794235710 +0000
+@@ -29,10 +29,22 @@
+ 
+ using namespace upm;
+ 
++#include <sstream>
++
++namespace patch
++{
++    template < typename T > std::string to_string( const T& n )
++    {
++        std::ostringstream stm ;
++        stm << n ;
++        return stm.str() ;
++    }
++}
++
+ void max30100_throw(std::string func, std::string cmd, upm_result_t result)
+ {
+     throw std::runtime_error(func + ": " + cmd + " failed, " +
+-            "upm_result_t: " + std::to_string(result));
++            "upm_result_t: " + patch::to_string(result));
+ }
+ 
+ MAX30100::MAX30100(int16_t i2c_bus) : _dev(max30100_init(i2c_bus))
+diff -Naur a/src/mma7361/mma7361.cxx b/src/mma7361/mma7361.cxx
+--- a/src/mma7361/mma7361.cxx	2017-10-16 13:19:48.000000000 +0000
++++ b/src/mma7361/mma7361.cxx	2017-10-17 08:55:05.026238214 +0000
+@@ -31,6 +31,19 @@
+ using namespace upm;
+ using namespace std;
+ 
++#include <sstream>
++
++namespace patch
++{
++    template < typename T > std::string to_string( const T& n )
++    {
++        std::ostringstream stm ;
++        stm << n ;
++        return stm.str() ;
++    }
++}
++
++
+ MMA7361::MMA7361(int x_pin, int y_pin, int z_pin,
+                  int selftest_pin, int sleep_pin,
+                  int freefall_pin, int range_pin,
+@@ -67,7 +80,7 @@
+     {
+       throw std::runtime_error(string(__FUNCTION__)
+                                + ": mma7361_freefall() failed with UPM error "
+-                               + to_string(int(rv)) );
++                               + patch::to_string(int(rv)) );
+     }
+ 
+   return freefall;
+@@ -81,7 +94,7 @@
+     {
+       throw std::runtime_error(string(__FUNCTION__)
+                                + ": mma7361_selftest() failed with UPM error "
+-                               + to_string(int(rv)) );
++                               + patch::to_string(int(rv)) );
+     }
+ }
+ 
+@@ -93,7 +106,7 @@
+     {
+       throw std::runtime_error(string(__FUNCTION__)
+                                + ": mma7361_update() failed with UPM error "
+-                               + to_string(int(rv)) );
++                               + patch::to_string(int(rv)) );
+     }
+ }
+ 
+diff -Naur a/src/ms5611/ms5611.cxx b/src/ms5611/ms5611.cxx
+--- a/src/ms5611/ms5611.cxx	2017-10-16 13:19:48.000000000 +0000
++++ b/src/ms5611/ms5611.cxx	2017-10-17 08:55:05.170237745 +0000
+@@ -26,6 +26,7 @@
+ #include <unistd.h>
+ #include <string.h>
+ #include <time.h>
++#include <errno.h>
+ #include "ms5611.hpp"
+ 
+ 

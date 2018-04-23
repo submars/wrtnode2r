@@ -1,0 +1,1135 @@
+Source-Makefile: feeds/i2ctools/accel-ppp/Makefile
+Package: accel-ppp
+Submenu: VPN
+Version: 1.8.0-beta-20131107-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +libpcre +libpthread +librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: accel-ppp VPN server
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Source: accel-ppp-1.8.0-beta-20131107.tar.bz2
+Type: ipkg
+Description:  The ACCEL-PPP is high performance PPTP/L2TP/PPPoE server for Linux. Userspace
+ daemon has its own PPP implementation, so it does not uses pppd and one process
+ (multi-threaded) manages all connections.
+http://sourceforge.net/apps/trac/accel-ppp/wiki
+Entware team, wl500g-repo.googlecode.com
+@@
+
+
+Source-Makefile: feeds/i2ctools/barcode/Makefile
+Package: barcode
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Utility to get data from event devices
+Maintainer: https://github.com/ZigFisher/Glutinium
+Source: 
+Type: ipkg
+Description:  This package get data from event devices.
+https://github.com/ZigFisher/Glutinium
+@@
+
+
+Source-Makefile: feeds/i2ctools/empty/Makefile
+Package: empty
+Version: 0.6.18b-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Run applications under pseudo-terminal sessions
+Maintainer: 
+Source: empty-0.6.18b.tgz
+Type: ipkg
+Description:  empty is an utility that provides an interface to execute and/or interact
+ with processes under pseudo-terminal sessions (PTYs). This tool is
+ definitely useful in programming of shell scripts designed to communicate
+ with interactive programs like telnet, ssh, ftp, etc. In some cases, empty
+ can be the simplest replacement for TCL/expect or other similar
+ programming tools.
+http://empty.sourceforge.net
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/etherdump/Makefile
+Package: etherdump
+Version: 2.11-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Etherdump is an extremely small packet sniffer
+Maintainer: 
+Source: etherdump-2.11.tar.gz
+Type: ipkg
+Description: Etherdump is an extremely small packet sniffer
+http://freecode.com/projects/etherdump
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/fixsum/Makefile
+Package: fixsum
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: admin
+Category: Administration
+Title: Fix atheros ath9k chipset EEPROM checksum
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	Fix atheros ath9k chipset EEPROM checksum.
+	Binary file is wholeflash data or "EEPROM" partition.
+http://www.home-wifi.com/thread-6667-1-1.html
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/flypeek/Makefile
+Package: flypeek
+Version: 0.01-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libjpeg +libv4l
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: multimedia
+Category: Multimedia
+Title: Application for Linux-UVC compatible webcams
+Maintainer: Igor Zalatov <flyrouter@gmail.com>
+Source: flypeek-0.01.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Application for Linux-UVC compatible webcams
+Igor Zalatov <flyrouter@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/flyscripts/Makefile
+Package: flyscripts_base
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Base FlyRouter scripts
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Base FlyRouter scripts
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_base
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_energy
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_ipcam
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_msl
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_sich
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_ugb
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_bricket_ukrn
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_octonix_mr3220_ugb
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_rkeeper_wr841n_base
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_crmifc_wr841n_tuneller
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_switron_rt2257_base
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_switron_k4700_base
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_zftlab_bricket_base
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_zftlab_bricket_flypeek
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+Package: flyscripts_zftlab_bricket_mywifi
+Version: 2.0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Extra packages
+Title: Custom project settings
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Custom project settings
+https://github.com/ZigFisher/Glutinium/tree/master/flyscripts
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/gpio-littlewire/Makefile
+Package: kmod-gpio-littlewire
+Submenu: Other modules
+Version: <LINUX_VERSION>+0.1-1
+Depends: @GPIO_SUPPORT +kmod-usb-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Little Wire USB device GPIO driver
+Maintainer: https://www.mail-archive.com/linux-gpio@vger.kernel.org/msg01353.html
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Little Wire USB device GPIO driver
+https://www.mail-archive.com/linux-gpio@vger.kernel.org/msg01353.html
+@@
+
+
+Source-Makefile: feeds/i2ctools/gpio-rcswitch/Makefile
+Package: kmod-gpio-rcswitch
+Submenu: Other modules
+Version: <LINUX_VERSION>+0.1-1
+Depends: @GPIO_SUPPORT
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel module for control 433Mhz based RC switches
+Maintainer: https://github.com/wendlers/rcswitch-kmod
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Linux kernel module to control 433Mhz based RC switches through sysfs
+https://github.com/wendlers/rcswitch-kmod
+@@
+
+
+Source-Makefile: feeds/i2ctools/gpio-watch/Makefile
+Package: gpio-watch
+Version: 2017-06-08-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @GPIO_SUPPORT +librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: GPIO monitoring tool
+Maintainer: https://github.com/larsks/gpio-watch
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: 	GPIO monitoring tool
+https://github.com/larsks/gpio-watch
+@@
+
+
+Source-Makefile: feeds/i2ctools/gpioctl/Makefile
+Package: gpioctl
+Version: 1.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @GPIO_SUPPORT
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Tool for controlling gpio pins
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	Tool for controlling gpio pins
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/homes-smart/Makefile
+Package: homes-smart
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Some utils for Homes-smarT project based on USBasp device
+Maintainer: http://zftlab.org
+Source: 
+Type: ipkg
+Description:   Some utils for Homes-smarT project based on USBasp device.
+http://zftlab.org
+@@
+
+
+Source-Makefile: feeds/i2ctools/httping/Makefile
+Package: httping
+Version: 1.5.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Httping is like 'ping' but for http-requests
+Maintainer: 
+Source: httping-1.5.2.tgz
+Type: ipkg
+Description: 	Give it an url, and it'll show you how long it takes to connect, send a
+	request and retrieve the reply (only the headers). Be aware that the
+	transmission across the network also takes time!
+http://www.vanheusden.com/httping/
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/i2c-hd44780/Makefile
+Package: kmod-i2c-hd44780
+Submenu: Other modules
+Version: <LINUX_VERSION>+0.1-2
+Depends: +kmod-i2c-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for hd44780-based LCD display
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	Kernel driver for access to hd44780-based display via i2c
+https://github.com/lucidm/lcdi2c
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/i2c-lcd/Makefile
+Package: i2c-lcd
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ramips @GPIO_SUPPORT +kmod-i2c-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: LCD monitor for HD44780 over I2C by PCF8574 bus expander
+Maintainer: http://flymon.net
+Source: 
+Type: ipkg
+Description:   LCD monitor for HD44780 over I2C by PCF8574 bus expander.
+http://flymon.net
+@@
+
+
+Source-Makefile: feeds/i2ctools/i2c-telemetry/Makefile
+Package: i2c-telemetry
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread kmod-i2c-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Simple I2C telemetry system
+Maintainer: http://flymon.net
+Source: 
+Type: ipkg
+Description:   Simple I2C telemetry system.
+http://flymon.net
+@@
+
+
+Source-Makefile: feeds/i2ctools/i2c-tools/Makefile
+Package: i2c-tools
+Version: 3.0.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: PACKAGE_python-smbus:python
+Section: utils
+Category: Utilities
+Title: I2C tools for Linux
+Maintainer: 
+Source: i2c-tools-3.0.3.tar.bz2
+Type: ipkg
+Description:  This package contains an heterogeneous set of I2C tools for Linux. These tools
+ were originally part of the lm-sensors package.
+ Includes:
+ - i2cdetect
+ - i2cdump
+ - i2cget
+ - i2cset
+http://www.lm-sensors.org/wiki/I2CTools
+
+@@
+
+Package: python-smbus
+Submenu: Python
+Version: 3.0.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +PACKAGE_python-smbus:python-mini +i2c-tools
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: PACKAGE_python-smbus:python
+Section: lang
+Category: Languages
+Title: Python bindings for the SMBUS
+Maintainer: 
+Source: i2c-tools-3.0.3.tar.bz2
+Type: ipkg
+Description:  This package contains an heterogeneous set of I2C tools for Linux.
+
+ This package contain the python bindings for Linux SMBus access through i2c-dev.
+http://www.lm-sensors.org/wiki/I2CTools
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/libnl-3/Makefile
+Package: libnl-3
+Version: 3.2.21-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: netlink socket library
+Maintainer: 
+Source: libnl-3.2.21.tar.gz
+Type: ipkg
+Description:  This package contains a library for applications dealing with netlink sockets
+http://people.suug.ch/~tgr/libnl/
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/littlewire/Makefile
+Package: littlewire
+Version: 2014-11-30-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Little Wire example utilites for for Digispark (tiny85 with USB)
+Maintainer: http://eko.one.pl
+Source: littlewire-2014-11-30-86dcd06a6aaaa4d90657b1ae5976812140be5c61.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Little Wire example utilites for for Digispark (tiny85 with USB)
+http://eko.one.pl
+@@
+
+
+Source-Makefile: feeds/i2ctools/littlewire-extra/Makefile
+Package: littlewire-extra
+Version: 2016-10-14-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Little Wire experimental utilites
+Maintainer: https://zftlab.org
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Little Wire experimental utilites
+https://zftlab.org
+@@
+
+
+Source-Makefile: feeds/i2ctools/lowpan-tools/Makefile
+Package: lowpan-tools
+Version: git-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libnl-3
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: network
+Category: Network
+Title: a set of utils to manage the Linux LoWPAN stack
+Maintainer: 
+Source: lowpan-tools-git-a1d9615adde6d1a568813c24a128273ed755af04.tar.gz
+Type: ipkg
+Description: This is a set of utils to manage the Linux LoWPAN stack.
+The LoWPAN stack aims for IEEE 802.15.4-2003 (and for lesser extent
+IEEE 802.15.4-2006) compatibility.
+
+If you want to learn more, please go to http://linux-zigbee.sf.net/
+http://sourceforge.net/apps/trac/linux-zigbee/
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/mercury236/Makefile
+Package: mercury236
+Version: 2017-08-10-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Mercury 236 power meter RS485 communication utility
+Maintainer: https://github.com/Shden/mercury236
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Mercury 236 power meter RS485 communication utility
+https://github.com/Shden/mercury236
+@@
+
+
+Source-Makefile: feeds/i2ctools/microbe/Makefile
+Package: microbe
+Version: 2017-11-30-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +busybox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Microbe - a selection of scripts for routers with a small amount of flash memory
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Microbe - a selection of scripts for routers with a small amount of flash memory
+https://github.com/ZigFisher/Glutinium/tree/master/microbe
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/micronucleus/Makefile
+Package: micronucleus
+Version: 2015-07-29-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Micronucleus - ATTiny usb bootloader
+Maintainer: https://github.com/micronucleus/micronucleus
+Source: micronucleus-2015-07-29-0fb6c10fa92b3bc3b5e217f1369d7325faba145c.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Micronucleus - ATTiny usb bootloader
+https://github.com/micronucleus/micronucleus
+@@
+
+
+Source-Makefile: feeds/i2ctools/mii-diag/Makefile
+Package: mii-diag
+Version: 2018-03-04-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: mii-diag - Network adapter control and monitoring
+Maintainer: https://github.com/oe-lite/base/tree/master/recipes/net-tools/files
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	mii-diag - Network adapter control and monitoring
+https://github.com/oe-lite/base/tree/master/recipes/net-tools/files
+@@
+
+
+Source-Makefile: feeds/i2ctools/mini_snmpd/Makefile
+Package: mini_snmpd
+Version: 1.4-rc1-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +jsonfilter +ubus +procd +ubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: A tiny SNMP server for embedded systems 
+Maintainer: Marcin Jurkowski <marcin1j@gmail.com>
+Source: mini_snmpd-1.4-rc1.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Description: A tiny SNMP server for embedded systems 
+http://troglobit.github.io/mini-snmpd.html
+Marcin Jurkowski <marcin1j@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/mjpg-streamer-lite/Makefile
+Package: mjpg-streamer-lite
+Version: 2.0.1a-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: multimedia
+Category: Multimedia
+Title: ExtraLight application for Linux-UVC compatible webcams
+Maintainer: Igor Zalatov <flyrouter@gmail.com>
+Source: mjpg-streamer-lite-2.0.1a.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: ExtraLight application for Linux-UVC compatible webcams
+Igor Zalatov <flyrouter@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/mt76x8/Makefile
+Package: mt76x8
+Version: 1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ramips_mt7628 +wireless-tools +maccalc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Ralink APSoC WiFi SoftAP driver
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Ralink APSoC WiFi SoftAP driver
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/ncftp/Makefile
+Package: ncftp
+Submenu: File Transfer
+Version: 3.2.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: NcFTP Client (main program)
+Maintainer: 
+Source: ncftp-3.2.5-src.tar.bz2
+Type: ipkg
+Description:  NcFTP Client (also known as just NcFTP) is a set of FREE application
+ programs implementing the File Transfer Protocol (FTP).
+ Main program.
+http://www.ncftpd.com/
+
+@@
+
+Package: ncftp-utils
+Submenu: File Transfer
+Version: 3.2.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: NcFTP Client (utilities)
+Maintainer: 
+Source: ncftp-3.2.5-src.tar.bz2
+Type: ipkg
+Description:  NcFTP Client (also known as just NcFTP) is a set of FREE application
+ programs implementing the File Transfer Protocol (FTP).
+ Utilities.
+http://www.ncftpd.com/
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/pzem004t/Makefile
+Package: pzem004t
+Version: 2016-10-14-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libcurl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: A simple util to read/write data PZEM-004T
+Maintainer: https://github.com/alabamas/PZEM-004T
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	A simple util to read/write data PZEM-004T
+https://github.com/alabamas/PZEM-004T
+@@
+
+
+Source-Makefile: feeds/i2ctools/rcswitch/Makefile
+Package: rcswitch
+Version: 2016-10-08-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Some utils for control RCswitch devices
+Maintainer: https://github.com/apiel/rcswitch
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Some utils for control RCswitch devices
+https://github.com/apiel/rcswitch
+@@
+
+
+Source-Makefile: feeds/i2ctools/remserial/Makefile
+Package: remserial
+Submenu: SERIAL
+Version: 1.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Bridge between a TCP/IP network and serial ports
+Maintainer: 
+Source: remserial-1.4.tar.gz
+Type: ipkg
+Description: Bridge between a TCP/IP network and serial ports
+http://lpccomp.bc.ca/remserial/
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/rs485conf/Makefile
+Package: rs485conf
+Version: 2016-07-04-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Util for get/set RS485 configuration of TTY
+Maintainer: https://github.com/mniestroj/rs485conf
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Util for get/set RS485 configuration of TTY
+https://github.com/mniestroj/rs485conf
+@@
+
+
+Source-Makefile: feeds/i2ctools/sshpass/Makefile
+Package: sshpass
+Version: 1.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: sshpass
+Maintainer: 
+Source: sshpass-1.5.tar.gz
+Type: ipkg
+Description:        Sshpass is a tool for non-interactivly performing password authentication with SSH's
+Non-interactive SSH authenticator
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/tg-bot1/Makefile
+Package: tg-bot1
+Version: 2017-11-26-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +curl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: TG-Bot1 - simple Telegram bot for OpenWrt based devices
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: 	TG-Bot1 - simple Telegram bot for OpenWrt based devices
+https://github.com/ZigFisher/Glutinium/tree/master/tg-bot1
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/tg-bot2/Makefile
+Package: tg-bot2
+Version: 2015-08-07-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libcurl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: TG-Bot2 - simple Telegram bot for OpenWrt based devices
+Maintainer: https://github.com/shinmai-rookie/rous-mola-bot-telegram
+Source: 
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	TG-Bot2 - simple Telegram bot for OpenWrt based devices
+https://github.com/shinmai-rookie/rous-mola-bot-telegram
+@@
+
+
+Source-Makefile: feeds/i2ctools/tg-web/Makefile
+Package: tg-web
+Version: 2017-11-30-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +haserl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: TG-Web - a minimalistic web interface for bots and automation systems
+Maintainer: Zig Fisher <flyrouter@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: 	TG-Web - a minimalistic web interface for bots and automation systems
+https://github.com/ZigFisher/Glutinium/tree/master/tg-web
+Zig Fisher <flyrouter@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/uvc-ctrl/Makefile
+Package: uvc-ctrl
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libv4l
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: multimedia
+Category: Multimedia
+Title: Utility for set and display uvc camera control option
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	Utility for set and display uvc camera control option.
+https://github.com/allanbian1017/uvc-ctrl
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/uvc2http/Makefile
+Package: uvc2http
+Version: 0.01-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libv4l
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: multimedia
+Category: Multimedia
+Title: UVC to HTTP streamer
+Maintainer: Oleg <legich55555@gmail.com>
+Source: uvc2http-518a089136156bda72d77c5469a628fe157daa1f.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: UVC to HTTP streamer
+Oleg <legich55555@gmail.com>
+@@
+
+
+Source-Makefile: feeds/i2ctools/vtun-lite/Makefile
+Package: vtun-lite
+Submenu: VPN
+Version: 3.0.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-tun
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: VPN tunneling daemon (no ssl/lzo/zlib)
+Maintainer: 
+Source: vtun-3.0.2.tar.gz
+Type: ipkg
+Description: VPN tunneling daemon (no ssl/lzo/zlib)
+http://vtun.sourceforge.net
+
+@@
+
+
+Source-Makefile: feeds/i2ctools/webadmin/Makefile
+Package: webadmin
+Version: 2016-10-14-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread haserl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: admin
+Category: Administration
+Title: FlyRouter v.2 WEB administration interface
+Maintainer: http://flyrouter.net
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: FlyRouter v.2 WEB administration interface
+http://flyrouter.net
+@@
+
+

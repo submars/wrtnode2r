@@ -1,0 +1,11 @@
+--- a/src/mips/mips.c	2017-10-16 10:07:33.000000000 +0000
++++ b/src/mips/mips.c	2017-10-17 10:07:03.105634514 +0000
+@@ -21,7 +21,7 @@
+  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  */
+-
++#define _GNU_SOURCE
+ #include <stdlib.h>
+ #include <string.h>
+ 
