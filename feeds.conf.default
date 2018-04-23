@@ -1,5 +1,5 @@
-src-git wiringPi https://github.com/nmaas87/rpi-openwrt-packages.git
-src-git i2ctools https://github.com/ZigFisher/Glutinium.git
+#src-git wiringPi https://github.com/nmaas87/rpi-openwrt-packages.git
+#src-git i2ctools https://github.com/ZigFisher/Glutinium.git
 #src-git mraa https://github.com/intel-iot-devkit/mraa.git
 #src-git mraaupm7688 https://github.com/crblanaru/mraaupm7688.git
 src-git packages https://github.com/openwrt/packages.git;for-15.05
