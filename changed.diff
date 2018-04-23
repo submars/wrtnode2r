@@ -1,0 +1,170 @@
+diff --git a/feeds.conf.default b/feeds.conf.default
+index 22518d4..11f2df6 100644
+--- a/feeds.conf.default
++++ b/feeds.conf.default
+@@ -1,9 +1,14 @@
++src-git wiringPi https://github.com/nmaas87/rpi-openwrt-packages.git
++src-git i2ctools https://github.com/ZigFisher/Glutinium.git
++#src-git mraa https://github.com/intel-iot-devkit/mraa.git
++#src-git mraaupm7688 https://github.com/crblanaru/mraaupm7688.git
+ src-git packages https://github.com/openwrt/packages.git;for-15.05
+ src-git luci https://github.com/openwrt/luci.git;for-15.05
+ src-git routing https://github.com/openwrt-routing/packages.git;for-15.05
+ src-git telephony https://github.com/openwrt/telephony.git;for-15.05
+ src-git management https://github.com/openwrt-management/packages.git;for-15.05
+-src-git wrtnode https://github.com/wrtnode/openwrt-packages.git
++#src-git wrtnode https://github.com/wrtnode/openwrt-packages.git
++src-git wrtnode http://github.com/WRTnode/openwrt-packages.git
+ #src-git targets https://github.com/openwrt/targets.git
+ src-git oldpackages https://git.openwrt.org/packages.git
+ #src-svn xwrt http://x-wrt.googlecode.com/svn/trunk/package
+diff --git a/package/base-files/files/etc/config/system b/package/base-files/files/etc/config/system
+index 3dfbfc4..3096148 100644
+--- a/package/base-files/files/etc/config/system
++++ b/package/base-files/files/etc/config/system
+@@ -1,6 +1,7 @@
+ config system
+ 	option hostname	OpenWrt
+-	option timezone	UTC
++	option timezone	CST-8
++	option zonename Asia/Shanghai
+ 
+ config timeserver ntp
+ 	list server	0.openwrt.pool.ntp.org
+diff --git a/package/kernel/linux/modules/nls.mk b/package/kernel/linux/modules/nls.mk
+index 55c5c1a..158e1e9 100644
+--- a/package/kernel/linux/modules/nls.mk
++++ b/package/kernel/linux/modules/nls.mk
+@@ -305,3 +305,20 @@ define KernelPackage/nls-utf8/description
+ endef
+ 
+ $(eval $(call KernelPackage,nls-utf8))
++
++
++define KernelPackage/nls-cp936
++  SUBMENU:=Native Language Support
++  TITLE:=Codepage 936 (China)
++  KCONFIG:=CONFIG_NLS_CODEPAGE_936
++  FILES:=$(LINUX_DIR)/fs/nls/nls_cp936.ko
++  AUTOLOAD:=$(call AutoLoad,25,nls_cp936)
++  $(call AddDepends/nls)
++endef
++
++define KernelPackage/nls-cp936/description
++  Kernel module for NLS Codepage 936 (Chinese)
++endef
++
++$(eval $(call KernelPackage,nls-cp936))
++
+diff --git a/target/linux/ramips/dts/WRTNODE2R.dts b/target/linux/ramips/dts/WRTNODE2R.dts
+index 6af4dd7..57e08ba 100644
+--- a/target/linux/ramips/dts/WRTNODE2R.dts
++++ b/target/linux/ramips/dts/WRTNODE2R.dts
+@@ -17,10 +17,17 @@
+ 	pinctrl {
+ 		state_default: pinctrl0 {
+ 			gpio {
+-				ralink,group = "i2c", "gpio", "wled_an";
++				ralink,group = "gpio", "wled_an";
+ 				ralink,function = "gpio";
+ 			};
+ 		};
++		
++		i2c_pins:i2c {
++			i2c{
++				ralink,group= "i2c";
++				ralink,function= "i2c";
++			};
++		};
+ 	};
+ 
+ 	palmbus@10000000 {
+@@ -74,6 +81,20 @@
+ 			status = "okay";
+ 		};
+ 
++		i2c@900 {
++			compatible = "mediatek,wrtnode2r", "mediatek,mt7628-i2c";
++			reg= <0x900 0x100>;
++			resets = <&rstctrl 16>;
++			reset-names= "i2c";
++			
++			#address-cells = <1>;
++			#size-cells= <0>;
++
++			status= "okay";
++			
++			pinctrl-names = "default";
++			pinctrl-0 = <&i2c_pins>;
++		};
+ 	};
+ 
+ 	ethernet@10100000 {
+@@ -97,7 +118,7 @@
+ 		};
+ 	}; 
+ 
+-
++/*
+ 	gpio-keys-polled {
+ 		compatible = "gpio-keys-polled";
+ 		#address-cells = <1>;
+@@ -109,5 +130,5 @@
+ 			linux,code = <0x198>;
+ 		};
+ 	};
++*/
+ };
+-
+diff --git a/target/linux/ramips/mt7628/config-3.18 b/target/linux/ramips/mt7628/config-3.18
+index 6603554..4344570 100644
+--- a/target/linux/ramips/mt7628/config-3.18
++++ b/target/linux/ramips/mt7628/config-3.18
+@@ -13,6 +13,7 @@ CONFIG_ARCH_WANT_IPC_PARSE_VERSION=y
+ CONFIG_AT803X_PHY=y
+ CONFIG_CC_OPTIMIZE_FOR_SIZE=y
+ CONFIG_CEVT_R4K=y
++CONFIG_CEVT_SYSTICK_QUIRK=y
+ CONFIG_CLKDEV_LOOKUP=y
+ CONFIG_CLKEVT_RT3352=y
+ CONFIG_CLKSRC_MMIO=y
+@@ -93,6 +94,13 @@ CONFIG_HAVE_PERF_EVENTS=y
+ CONFIG_HAVE_SYSCALL_TRACEPOINTS=y
+ CONFIG_HW_HAS_PCI=y
+ CONFIG_HZ_PERIODIC=y
++CONFIG_I2C=y
++CONFIG_I2C_BOARDINFO=y
++CONFIG_I2C_CHARDEV=y
++CONFIG_I2C_COMPAT=y
++# CONFIG_I2C_MT7621 is not set
++CONFIG_I2C_RALINK=y
++CONFIG_I2C_SMBUS=y
+ CONFIG_ICPLUS_PHY=y
+ CONFIG_IMAGE_CMDLINE_HACK=y
+ CONFIG_INITRAMFS_SOURCE=""
+@@ -149,8 +157,6 @@ CONFIG_PINCTRL_RT2880=y
+ # CONFIG_PINCTRL_SINGLE is not set
+ # CONFIG_PREEMPT_RCU is not set
+ CONFIG_RALINK=y
+-# CONFIG_RALINK_ILL_ACC is not set
+-CONFIG_RALINK_USBPHY=y
+ # CONFIG_RALINK_WDT is not set
+ # CONFIG_RCU_STALL_COMMON is not set
+ CONFIG_RESET_CONTROLLER=y
+@@ -165,8 +171,6 @@ CONFIG_SOC_MT7620=y
+ # CONFIG_SOC_RT288X is not set
+ # CONFIG_SOC_RT305X is not set
+ # CONFIG_SOC_RT3883 is not set
+-# CONFIG_SND_MT76XX_SOC_MT7620 is not set
+-CONFIG_SND_MT76XX_SOC_MT7628=y
+ CONFIG_SPI=y
+ CONFIG_SPI_MASTER=y
+ CONFIG_SPI_MT7621=y
+@@ -180,7 +184,6 @@ CONFIG_SYS_SUPPORTS_ARBIT_HZ=y
+ CONFIG_SYS_SUPPORTS_LITTLE_ENDIAN=y
+ CONFIG_SYS_SUPPORTS_MIPS16=y
+ CONFIG_TICK_CPU_ACCOUNTING=y
+-CONFIG_USB_PHY=y
+ CONFIG_USB_SUPPORT=y
+ CONFIG_USE_OF=y
+ CONFIG_WATCHDOG_CORE=y

@@ -1,0 +1,21 @@
+Source-Makefile: feeds/i2ctools/httping/Makefile
+Package: httping
+Version: 1.5.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Httping is like 'ping' but for http-requests
+Maintainer: 
+Source: httping-1.5.2.tgz
+Type: ipkg
+Description: 	Give it an url, and it'll show you how long it takes to connect, send a
+	request and retrieve the reply (only the headers). Be aware that the
+	transmission across the network also takes time!
+http://www.vanheusden.com/httping/
+
+@@
+
+

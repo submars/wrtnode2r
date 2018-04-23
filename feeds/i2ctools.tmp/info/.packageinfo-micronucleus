@@ -1,0 +1,20 @@
+Source-Makefile: feeds/i2ctools/micronucleus/Makefile
+Package: micronucleus
+Version: 2015-07-29-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Micronucleus - ATTiny usb bootloader
+Maintainer: https://github.com/micronucleus/micronucleus
+Source: micronucleus-2015-07-29-0fb6c10fa92b3bc3b5e217f1369d7325faba145c.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Micronucleus - ATTiny usb bootloader
+https://github.com/micronucleus/micronucleus
+@@
+
+
